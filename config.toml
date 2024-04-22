@@ -7,6 +7,9 @@ title = "Equal Earth Web Mapping"
 # The default language; used in feeds.
 default_language = "en"
 
+# The default author for pages
+author = "Pirmin Kalberer"
+
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = false
 

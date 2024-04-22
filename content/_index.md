@@ -1,5 +1,7 @@
 +++
 title = "Equal Earth Web Mapping"
+date = 2024-04-22
+updated = 2024-04-22
 +++
 
 ## Equal-area projection for web mapping

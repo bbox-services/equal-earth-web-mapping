@@ -1,5 +1,7 @@
 ---
 title: "Leaflet"
+date: 2024-04-22
+updated: 2024-04-22
 template: "mapviewer.html"
 extra:
   header: |
