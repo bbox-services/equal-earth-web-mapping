@@ -9,7 +9,9 @@ Mainly because of programmers laziness (which can be a good thing!), 99% of toda
 This is the obvious candidate for replacing Web Mercator in web maps. I will evaluate using Equal Earth in tiled maps and the most important Javascript libraries. As a way to prove and document its usage, my plan is to publish maps covering topics like transport, weather, aviation and sensors. These will certainly benefit from an adequate world projection and are also use cases for real-time updates, another topic I want to investigate.
 
 
-## Equal Earth projection using Web Mercator grid
+## Equal Earth vector tiles using Web Mercator grid
 
 Examples:
 * [MapLibre](/maplibre)
+* [OpenLayers](/openlayers)
+* [Leaflet](/leaflet)
