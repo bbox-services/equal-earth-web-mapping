@@ -4,6 +4,11 @@
 
 {% block header %}
 {{ page.extra.header | safe }}
+<style>
+  /* Reset almond.css styles */
+  button { text-transform: inherit; min-height: inherit; }
+  details summary { margin: inherit; padding: inherit; }
+</style>
 {% endblock header %}
 
 {% block content %}
