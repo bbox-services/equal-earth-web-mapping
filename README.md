@@ -2,4 +2,6 @@
 
 ## Build site
 
-Built with [Zola](https://www.getzola.org/).
+The web site is built with [Zola](https://www.getzola.org/).
+
+Usage: `zola serve`
