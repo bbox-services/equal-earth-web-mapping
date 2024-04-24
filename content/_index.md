@@ -15,7 +15,18 @@ This site is an information collection about using the Equal Earth map projectio
 
 ## Equal Earth vector tiles using Web Mercator grid
 
-Examples:
+A quadratic grid for Equal Earth centered on Greenwich is similar to a Web Mercator grid.
+Instead of Mercator grid corners at (-20'037'508, -20'037'508) and (20'037'508, 20'037'508)
+the grid corners of Equal Earth Greenwich are at (-17'243'959, -17'243'959) and (17'243'959, 17'243'959).
+
+![](gridscale.jpg)
+
+Tiles produced in Equal Earth projection on a Equal Earth Greenwich grid can be adressed with
+the same tile numbers by a map viewer using a Web Merctor grid. Tiles are displayed with a scale 
+factor of 1.162. Calculations between geographic WGS84 coordinates and the map coordinate reference system are obviously wrong.
+Only 0/0 is the same. But maps can be displayed without any coordinate projection calculations.
+
+Basic usage examples:
 * [MapLibre](/maplibre)
 * [OpenLayers](/openlayers)
 * [Leaflet](/leaflet)
