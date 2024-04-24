@@ -36,6 +36,7 @@ Basic usage examples:
 
 Examples:
 * [OpenLayers](/ol-equal)
+* [OpenLayers with Proj4js](/ol-equal-proj)
 
 
 ## Creating data in Equal Earth projection
