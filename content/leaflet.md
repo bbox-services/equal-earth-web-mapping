@@ -1,7 +1,7 @@
 ---
-title: "Leaflet"
+title: "Leaflet - Web Mercator grid"
 date: 2024-04-22
-updated: 2024-04-22
+updated: 2024-04-24
 template: "mapviewer.html"
 extra:
   header: |
@@ -19,3 +19,5 @@ extra:
         style: location.origin + '/natural-earth-countries-style.json'
     }).addTo(map);
 ---
+
+Leaflet map using Web Mercator tile grid. Vector tiles styled with GL JSON.

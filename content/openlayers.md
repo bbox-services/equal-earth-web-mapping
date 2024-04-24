@@ -1,7 +1,7 @@
 ---
-title: "OpenLayers"
+title: "OpenLayers - Web Mercator grid"
 date: 2024-04-22
-updated: 2024-04-22
+updated: 2024-04-24
 template: "mapviewer.html"
 extra:
   header: |
@@ -11,3 +11,5 @@ extra:
   js: |
     olms.apply('map', location.origin + '/natural-earth-countries-style.json');
 ---
+
+OpenLayers map using Web Mercator tile grid. Vector tiles styled with GL JSON.

@@ -1,7 +1,7 @@
 ---
-title: "MapLibre"
+title: "MapLibre - Web Mercator grid"
 date: 2024-04-22
-updated: 2024-04-22
+updated: 2024-04-24
 template: "mapviewer.html"
 extra:
   header: |
@@ -12,5 +12,6 @@ extra:
       container: 'map',
       style: location.origin + '/natural-earth-countries-style.json'
     });
-
 ---
+
+MapLibre map using Web Mercator tile grid. Vector tiles styled with GL JSON.

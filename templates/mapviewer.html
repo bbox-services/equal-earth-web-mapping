@@ -16,17 +16,18 @@
 <nav><a href="/">Home</a></nav>
 <h1>{{ page.title }}</h1>
 </header>
+{% if page.extra.body %}{{ page.extra.body | safe }}{% else %}{{ config.extra.body | safe }}{% endif %}
 
-<div id='map' style='width: 60%; aspect-ratio: 2/1;'></div>
+{{ page.content | safe }}
 
 <h3>HTML:</h3>
 <pre>
-&lt;div id=&#x27;map&#x27; style=&#x27;width: 60%; aspect-ratio: 2&#x2F;1;&#x27;&gt;&lt;&#x2F;div&gt;
+{% if page.extra.body %}{{ page.extra.body }}{% else %}{{ config.extra.body }}{% endif %}
 </pre>
 
 <h3>Javascript:</h3>
 <pre>
-{{ page.extra.js | safe }}
+{{ page.extra.js }}
 </pre>
 
 <h3>Header:</h3>

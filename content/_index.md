@@ -1,7 +1,7 @@
 +++
 title = "Equal Earth Web Mapping"
 date = 2024-04-22
-updated = 2024-04-22
+updated = 2024-04-24
 +++
 
 ## Equal-area projection for web mapping
@@ -30,6 +30,12 @@ Basic usage examples:
 * [MapLibre](/maplibre)
 * [OpenLayers](/openlayers)
 * [Leaflet](/leaflet)
+
+
+## Equal Earth vector tiles using Equal Earth grid
+
+Examples:
+* [OpenLayers](/ol-equal)
 
 
 ## Creating data in Equal Earth projection
