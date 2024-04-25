@@ -40,6 +40,15 @@ Examples:
 * [OpenLayers with GL JSON style](/ol-equal-styled)
 
 
+## Reproject data to Equal Earth
+
+Examples:
+* [OpenLayers - GeoJSON with mousover infos](/ol-geojson)
+* [OpenLayers - OSM raster tiles](/ol-osm-proj)
+* [D3 / Observable](https://observablehq.com/@d3/equal-earth)
+* [Matplotlib add-on](https://dneuman.github.io/EqualEarth/)
+
+
 ## Creating data in Equal Earth projection
 
 There are official EPSG codes for the following Equal Earth projection variants:
