@@ -25,4 +25,5 @@ highlight_code = true
 
 [extra]
 # Put all your custom variables here
-body = "<div id='map' style='width: 60%; aspect-ratio: 2/1;'></div>"
+#mapdiv = "<div id='map' style='width: 60%; aspect-ratio: 2/1;'></div>"
+mapdiv = "<div id='map'></div>"

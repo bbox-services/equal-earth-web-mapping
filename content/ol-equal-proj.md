@@ -9,7 +9,7 @@ extra:
     <link href="https://cdn.jsdelivr.net/npm/ol@9.1.0/ol.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/proj4@2.11.0/dist/proj4.min.js"></script>
   body: |
-    <div id='map' style='width: 60%; aspect-ratio: 2/1;'></div>
+    <div id='map'></div>
     <pre id="mouse-position"></pre>
   js: |
     proj4.defs(

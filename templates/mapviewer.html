@@ -4,11 +4,6 @@
 
 {% block header %}
 {{ page.extra.header | safe }}
-<style>
-  /* Reset almond.css styles */
-  button { text-transform: inherit; min-height: inherit; }
-  details summary { margin: inherit; padding: inherit; }
-</style>
 {% endblock header %}
 
 {% block content %}
@@ -16,24 +11,18 @@
 <nav><a href="/">Home</a></nav>
 <h1>{{ page.title }}</h1>
 </header>
-{% if page.extra.body %}{{ page.extra.body | safe }}{% else %}{{ config.extra.body | safe }}{% endif %}
+{% if page.extra.body %}{{ page.extra.body | safe }}{% else %}{{ config.extra.mapdiv | safe }}{% endif %}
 
 {{ page.content | safe }}
 
 <h3>HTML:</h3>
-<pre>
-{% if page.extra.body %}{{ page.extra.body }}{% else %}{{ config.extra.body }}{% endif %}
-</pre>
+<pre><code>{% if page.extra.body %}{{ page.extra.body }}{% else %}{{ config.extra.mapdiv }}{% endif %}</code></pre>
 
 <h3>Javascript:</h3>
-<pre>
-{{ page.extra.js }}
-</pre>
+<pre><code>{{ page.extra.js }}</code></pre>
 
 <h3>Header:</h3>
-<pre>
-{{ page.extra.header }}
-</pre>
+<pre><code>{{ page.extra.header }}</code></pre>
 
 <script>
 {{ page.extra.js | safe }}
