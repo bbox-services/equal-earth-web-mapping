@@ -16,8 +16,8 @@ This site is an information collection about using the Equal Earth map projectio
 ## Equal Earth vector tiles using Web Mercator grid
 
 A quadratic grid for Equal Earth centered on Greenwich is similar to a Web Mercator grid.
-Instead of Mercator grid corners at (-20'037'508, -20'037'508) and (20'037'508, 20'037'508)
-the grid corners of Equal Earth Greenwich are at (-17'243'959, -17'243'959) and (17'243'959, 17'243'959).
+Instead of Mercator grid corners at (-20'037'508, 20'037'508) and (20'037'508, -20'037'508)
+the grid corners of Equal Earth Greenwich are at (-17'243'959, 17'243'959) and (17'243'959, -17'243'959).
 
 ![grid diagram](/gridscale.jpg)
 
