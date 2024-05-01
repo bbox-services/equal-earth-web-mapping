@@ -27,8 +27,8 @@ factor of 1.162. Calculations between geographic WGS84 coordinates and the map c
 Only 0/0 is the same. But maps can be displayed without any coordinate projection calculations.
 
 Basic usage examples:
-* [MapLibre](/maplibre)
-* [OpenLayers](/openlayers)
+* [MapLibre](/maplibre) | [Asia-Pacific centered](/maplibre-asia-pacific) | [Americas centered](/maplibre-americas)
+* [OpenLayers](/openlayers) | [Asia-Pacific centered](/ol-asia-pacific) | [Americas centered](/ol-americas)
 * [Leaflet](/leaflet)
 
 
