@@ -12,10 +12,7 @@ extra:
     <div id='map'></div>
     <pre id="mouse-position"></pre>
   js: |
-    proj4.defs(
-      'EPSG:8857',
-      '+proj=eqearth +lon_0=0 +x_0=0 +y_0=0 +R=6371008.7714 +units=m +no_defs +type=crs'
-    );
+    proj4.defs('EPSG:8857', '+proj=eqearth +lon_0=0 +x_0=0 +y_0=0 +R=6371008.7714 +units=m +no_defs +type=crs');
     ol.proj.proj4.register(proj4);
 
     const extent = [-17243959.06, -17243959.06, 17243959.06, 17243959.06];
