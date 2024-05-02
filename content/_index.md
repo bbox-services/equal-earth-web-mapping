@@ -30,6 +30,7 @@ Basic usage examples:
 * [MapLibre](/maplibre) | [Asia-Pacific centered](/maplibre-asia-pacific) | [Americas centered](/maplibre-americas)
 * [OpenLayers](/openlayers) | [Asia-Pacific centered](/ol-asia-pacific) | [Americas centered](/ol-americas)
 * [Leaflet](/leaflet)
+* [DeckGL](/deckgl)
 
 
 ## Equal Earth vector tiles using Equal Earth grid
