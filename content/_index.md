@@ -38,6 +38,7 @@ Examples:
 * [OpenLayers](/ol-equal)
 * [OpenLayers with Proj4js](/ol-equal-proj)
 * [OpenLayers with GL JSON style](/ol-equal-styled)
+* [OpenLayers with projection switch](/ol-proj-switch)
 
 
 ## Reproject data to Equal Earth
