@@ -75,11 +75,6 @@ extra:
         projcode + ' | Center longitude: ' + coords.map(v => v.toFixed(2));
     }
 
-    function wrapLon(value) {
-      const worlds = Math.floor((value + 180) / 360);
-      return value - worlds * 360;
-    }
-
     function updateProjection(source) {
       const projection = source.getProjection();
       const view = map.getView();
@@ -96,9 +91,7 @@ extra:
 
     function onMoveEnd(evt) {
       const map = evt.map;
-      var center = centerLonLat(map.getView());
-      //const center_lon = wrapLon(center[0]);
-      const center_lon = center[0];
+      const center_lon = centerLonLat(map.getView())[0];
       display('center', [center_lon], map.getView().getProjection().getCode());
       if (center_lon >= 80 || center_lon < -155 ) {
         updateProjection(sources['EPSG:8859']);
