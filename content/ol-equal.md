@@ -13,6 +13,8 @@ extra:
       code: 'EPSG:8857',
       extent: extent,
       units: 'm',
+      global: true,
+      worldExtent: [-90, -180, 90, 180],
     });
     ol.proj.addProjection(projection);
 
@@ -39,8 +41,7 @@ extra:
       target: 'map',
       view: new ol.View({
         center: [0, 0],
-        projection: 'EPSG:8857',
-        extent: extent,
+        projection: projection,
         zoom: 1
       })
     });
