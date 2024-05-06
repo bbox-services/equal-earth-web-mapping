@@ -29,6 +29,7 @@ Only 0/0 is the same. But maps can be displayed without any coordinate projectio
 Basic usage examples:
 * [MapLibre](/maplibre) | [Asia-Pacific centered](/maplibre-asia-pacific) | [Americas centered](/maplibre-americas)
 * [OpenLayers](/openlayers) | [Asia-Pacific centered](/ol-asia-pacific) | [Americas centered](/ol-americas)
+* [OpenLayers switching to Web Mercator](/ol-mercator-switch)
 * [Leaflet](/leaflet)
 * [DeckGL](/deckgl)
 
