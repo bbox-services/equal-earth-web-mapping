@@ -1,5 +1,5 @@
 ---
-title: "OpenLayers - GeoJSON with mousover infos"
+title: "OpenLayers - GeoJSON with mouseover infos"
 date: 2024-04-25
 updated: 2024-04-25
 template: "mapviewer.html"

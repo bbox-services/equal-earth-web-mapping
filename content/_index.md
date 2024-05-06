@@ -46,7 +46,7 @@ Examples:
 
 Examples:
 * [D3 / Observable](/observable)
-* [OpenLayers - GeoJSON with mousover infos](/ol-geojson)
+* [OpenLayers - GeoJSON with mouseover infos](/ol-geojson)
 * [OpenLayers - OSM raster tiles](/ol-osm-proj)
 * [Gleo - styled GeoJSON](/gleo-geojson)
 * [Matplotlib add-on](https://dneuman.github.io/EqualEarth/)
