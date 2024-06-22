@@ -23,8 +23,9 @@ the grid corners of Equal Earth Greenwich are at (-17'243'959, 17'243'959) and (
 
 Tiles produced in Equal Earth projection on a Equal Earth Greenwich grid can be adressed with
 the same tile numbers by a map viewer using a Web Merctor grid. Tiles are displayed with a scale 
-factor of 1.162. Calculations between geographic WGS84 coordinates and the map coordinate reference system are obviously wrong.
-Only 0/0 is the same. But maps can be displayed without any coordinate projection calculations.
+factor of 1.162. Conversions between geographic WGS84 coordinates and the map coordinate reference 
+system give wrong results without adapted calculations.
+But maps can be displayed without any coordinate projection calculations.
 
 Basic usage examples:
 * [MapLibre](/maplibre) | [Asia-Pacific centered](/maplibre-asia-pacific) | [Americas centered](/maplibre-americas)
@@ -32,6 +33,14 @@ Basic usage examples:
 * [OpenLayers switching to Web Mercator](/ol-mercator-switch)
 * [Leaflet](/leaflet)
 * [DeckGL](/deckgl)
+
+
+## Combined Equal Earth / Web Mercator vector tiles
+
+Examples:
+* [MapLibre](/maplibre-eq2merc)
+* [OpenLayers](/ol-eq2merc)
+* [Leaflet](/leaflet-eq2merc)
 
 
 ## Equal Earth vector tiles using Equal Earth grid
