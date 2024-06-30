@@ -10,6 +10,8 @@ Most of today's web maps are using the [Web Mercator projection](https://en.wiki
 
 In 2018 Bojan Šavrič, Tom Patterson and Bernhard Jenny published their work on the [Equal Earth map projection](https://www.equal-earth.com/), an equal-area projection for world maps.
 
+![](/equal-earth-etopo1.jpg)
+
 This site is an information collection about using the Equal Earth map projection for web mapping.
 
 
