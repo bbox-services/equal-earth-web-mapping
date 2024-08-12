@@ -15,7 +15,7 @@ extra:
     var map = new maplibregl.Map({
       container: 'map',
       maxZoom: 6,
-      style: location.origin + '/natural-earth-countries-style.json'
+      style: 'https://equal.bbox.earth/natural-earth-countries-style.json'
     });
 
     map.on('style.load', () => {

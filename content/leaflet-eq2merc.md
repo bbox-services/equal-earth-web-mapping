@@ -16,8 +16,8 @@ extra:
   js: |
     var map = L.map('map').setView([0, 0], 1);
     var gl = L.maplibreGL({
-        style: location.origin + '/natural-earth-countries-style-eq2merc.json'
+        style: 'https://equal.bbox.earth/natural-earth-countries-style-eq2merc.json'
     }).addTo(map);
 ---
 
-Leaflet map map with Equal Earth tiles at z0-z2 and Web Mercator tiles at z > 2 on Web Mercator tile grid. Vector tiles styled with GL JSON.
+Leaflet map with Equal Earth tiles at z0-z2 and Web Mercator tiles at z > 2 on Web Mercator tile grid. Vector tiles styled with GL JSON.

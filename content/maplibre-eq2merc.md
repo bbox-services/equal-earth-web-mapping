@@ -10,7 +10,7 @@ extra:
   js: |
     var map = new maplibregl.Map({
       container: 'map',
-      style: location.origin + '/natural-earth-countries-style-eq2merc.json'
+      style: 'https://equal.bbox.earth/natural-earth-countries-style-eq2merc.json'
     });
 ---
 

@@ -16,7 +16,7 @@ extra:
   js: |
     var map = L.map('map').setView([0, 0], 1);
     var gl = L.maplibreGL({
-        style: location.origin + '/natural-earth-countries-style.json'
+        style: 'https://equal.bbox.earth/natural-earth-countries-style.json'
     }).addTo(map);
 ---
 

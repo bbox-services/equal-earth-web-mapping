@@ -16,7 +16,7 @@ extra:
       }),
       maxZoom: 3,
     });
-    olms.applyStyle(eqearth, location.origin + '/natural-earth-countries-style.json');
+    olms.applyStyle(eqearth, 'https://equal.bbox.earth/natural-earth-countries-style.json');
 
     var merc = new ol.layer.VectorTile({
       source: new ol.source.VectorTile({
@@ -25,7 +25,7 @@ extra:
       }),
       minZoom: 3,
     });
-    olms.applyStyle(merc, location.origin + '/natural-earth-countries-style.json', {updateSource: false});
+    olms.applyStyle(merc, 'https://equal.bbox.earth/natural-earth-countries-style.json', {updateSource: false});
 
     const map = new ol.Map({
       layers: [eqearth, merc],

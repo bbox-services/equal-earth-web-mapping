@@ -39,7 +39,7 @@ extra:
       source: source
     });
     // On initial load, tiles are shortly displayed with OL default style
-    olms.applyStyle(mvt, location.origin + '/natural-earth-countries-style.json');
+    olms.applyStyle(mvt, 'https://equal.bbox.earth/natural-earth-countries-style.json');
 
     var map = new ol.Map({
       layers: [mvt],

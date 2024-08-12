@@ -9,7 +9,7 @@ extra:
     <link href="https://cdn.jsdelivr.net/npm/ol@9.1.0/ol.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/ol-mapbox-style@12.3.1/dist/olms.js"></script>
   js: |
-    olms.apply('map', location.origin + '/natural-earth-countries-style-americas.json')
+    olms.apply('map', 'https://equal.bbox.earth/natural-earth-countries-style-americas.json')
 ---
 
 OpenLayers map using Web Mercator tile grid. Vector tiles styled with GL JSON.
