@@ -34,7 +34,7 @@ Basic usage examples:
 * [OpenLayers](/openlayers) | [Asia-Pacific centered](/ol-asia-pacific) | [Americas centered](/ol-americas)
 * [OpenLayers switching to Web Mercator](/ol-mercator-switch)
 * [Leaflet](/leaflet)
-* [DeckGL](/deckgl)
+* [deck.gl](/deckgl)
 
 
 ## Combined Equal Earth / Web Mercator vector tiles

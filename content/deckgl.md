@@ -1,5 +1,5 @@
 ---
-title: "DeckGL - Web Mercator grid"
+title: "deck.gl - Web Mercator grid"
 date: 2024-05-02
 updated: 2024-05-02
 template: "mapviewer.html"
@@ -36,4 +36,4 @@ extra:
     });
 ---
 
-MapLibre map with DeckGL layer using Web Mercator tile grid.
+MapLibre map with deck.gl layer using Web Mercator tile grid.
