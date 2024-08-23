@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Equal Earth Web Mapping</title>
+    <link rel="self" type="application/atom+xml" href="https://equal.bbox.earth/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://equal.bbox.earth"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2024-06-22T00:00:00+00:00</updated>
+    <id>https://equal.bbox.earth/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Leaflet - Equal Earth &#x2F; Web Mercator combined</title>
+        <published>2024-06-22T00:00:00+00:00</published>
+        <updated>2024-06-22T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Pirmin Kalberer
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://equal.bbox.earth/leaflet-eq2merc/"/>
+        <id>https://equal.bbox.earth/leaflet-eq2merc/</id>
+        
+        <content type="html" xml:base="https://equal.bbox.earth/leaflet-eq2merc/">&lt;p&gt;Leaflet map with Equal Earth tiles at z0-z2 and Web Mercator tiles at z &amp;gt; 2 on Web Mercator tile grid. Vector tiles styled with GL JSON.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>MapLibre - Equal Earth &#x2F; Web Mercator combined</title>
+        <published>2024-06-22T00:00:00+00:00</published>
+        <updated>2024-06-22T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Pirmin Kalberer
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://equal.bbox.earth/maplibre-eq2merc/"/>
+        <id>https://equal.bbox.earth/maplibre-eq2merc/</id>
+        
+        <content type="html" xml:base="https://equal.bbox.earth/maplibre-eq2merc/">&lt;p&gt;MapLibre map with Equal Earth tiles at z0-z2 and Web Mercator tiles at z &amp;gt;= 3 on Web Mercator tile grid. Vector tiles styled with GL JSON.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>OpenLayers - Equal Earth &#x2F; Web Mercator combined</title>
+        <published>2024-06-22T00:00:00+00:00</published>
+        <updated>2024-06-22T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Pirmin Kalberer
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://equal.bbox.earth/ol-eq2merc/"/>
+        <id>https://equal.bbox.earth/ol-eq2merc/</id>
+        
+        <content type="html" xml:base="https://equal.bbox.earth/ol-eq2merc/">&lt;p&gt;OpenLayers map with Equal Earth tiles at z0-z2 and Web Mercator tiles at z &amp;gt; 2 on Web Mercator tile grid. Vector tiles styled with GL JSON.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>OpenLayers - Switch to Web Mercator</title>
+        <published>2024-05-07T00:00:00+00:00</published>
+        <updated>2024-05-07T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Pirmin Kalberer
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://equal.bbox.earth/ol-mercator-switch/"/>
+        <id>https://equal.bbox.earth/ol-mercator-switch/</id>
+        
+        <content type="html" xml:base="https://equal.bbox.earth/ol-mercator-switch/">&lt;p&gt;OpenLayers with Equal Earth tiles for zoom level 1-2 and Web Mercator tiles for level 3-6.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>D3 &#x2F; Observable - dynamic center meridian</title>
+        <published>2024-05-06T00:00:00+00:00</published>
+        <updated>2024-05-06T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Pirmin Kalberer
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://equal.bbox.earth/observable/"/>
+        <id>https://equal.bbox.earth/observable/</id>
+        
+        <content type="html" xml:base="https://equal.bbox.earth/observable/">&lt;p&gt;&lt;img src=&quot;&#x2F;equal-earth-rotation.gif&quot; alt=&quot;rotating&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Equal Earth projection with dynamic center meridian.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;observablehq.com&#x2F;d&#x2F;ece4d307c72c1312&quot;&gt;Observable notebook&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>deck.gl - Web Mercator grid</title>
+        <published>2024-05-02T00:00:00+00:00</published>
+        <updated>2024-05-02T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Pirmin Kalberer
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://equal.bbox.earth/deckgl/"/>
+        <id>https://equal.bbox.earth/deckgl/</id>
+        
+        <content type="html" xml:base="https://equal.bbox.earth/deckgl/">&lt;p&gt;MapLibre map with deck.gl layer using Web Mercator tile grid.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>OpenLayers with projection switch</title>
+        <published>2024-05-02T00:00:00+00:00</published>
+        <updated>2024-05-02T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Pirmin Kalberer
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://equal.bbox.earth/ol-proj-switch/"/>
+        <id>https://equal.bbox.earth/ol-proj-switch/</id>
+        
+        <content type="html" xml:base="https://equal.bbox.earth/ol-proj-switch/">&lt;p&gt;OpenLayers map using Proj4js and Equal Earth tile grid. Vector tiles styled with GL JSON.
+Projection switches when longitude of map center passes 75°, -45° or -150° (+&#x2F;- 5°).&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>MapLibre - Equal Earth Americas</title>
+        <published>2024-05-01T00:00:00+00:00</published>
+        <updated>2024-05-01T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Pirmin Kalberer
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://equal.bbox.earth/maplibre-americas/"/>
+        <id>https://equal.bbox.earth/maplibre-americas/</id>
+        
+        <content type="html" xml:base="https://equal.bbox.earth/maplibre-americas/">&lt;p&gt;MapLibre map using Web Mercator tile grid. Vector tiles styled with GL JSON.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>MapLibre - Equal Earth Asia-Pacific</title>
+        <published>2024-05-01T00:00:00+00:00</published>
+        <updated>2024-05-01T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Pirmin Kalberer
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://equal.bbox.earth/maplibre-asia-pacific/"/>
+        <id>https://equal.bbox.earth/maplibre-asia-pacific/</id>
+        
+        <content type="html" xml:base="https://equal.bbox.earth/maplibre-asia-pacific/">&lt;p&gt;MapLibre map using Web Mercator tile grid. Vector tiles styled with GL JSON.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>OpenLayers - Equal Earth Americas</title>
+        <published>2024-05-01T00:00:00+00:00</published>
+        <updated>2024-05-01T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Pirmin Kalberer
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://equal.bbox.earth/ol-americas/"/>
+        <id>https://equal.bbox.earth/ol-americas/</id>
+        
+        <content type="html" xml:base="https://equal.bbox.earth/ol-americas/">&lt;p&gt;OpenLayers map using Web Mercator tile grid. Vector tiles styled with GL JSON.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>OpenLayers - Equal Earth Asia-Pacific</title>
+        <published>2024-05-01T00:00:00+00:00</published>
+        <updated>2024-05-01T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Pirmin Kalberer
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://equal.bbox.earth/ol-asia-pacific/"/>
+        <id>https://equal.bbox.earth/ol-asia-pacific/</id>
+        
+        <content type="html" xml:base="https://equal.bbox.earth/ol-asia-pacific/">&lt;p&gt;OpenLayers map using Web Mercator tile grid. Vector tiles styled with GL JSON.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Gleo - styled GeoJSON</title>
+        <published>2024-04-26T00:00:00+00:00</published>
+        <updated>2024-04-26T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Pirmin Kalberer
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://equal.bbox.earth/gleo-geojson/"/>
+        <id>https://equal.bbox.earth/gleo-geojson/</id>
+        
+        <content type="html" xml:base="https://equal.bbox.earth/gleo-geojson/">&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;ivansanchez.gitlab.io&#x2F;gleo&#x2F;&quot;&gt;Gleo&lt;&#x2F;a&gt; map with built-in support for Equal Earth.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>OpenLayers - GeoJSON with mouseover infos</title>
+        <published>2024-04-25T00:00:00+00:00</published>
+        <updated>2024-04-25T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Pirmin Kalberer
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://equal.bbox.earth/ol-geojson/"/>
+        <id>https://equal.bbox.earth/ol-geojson/</id>
+        
+        <content type="html" xml:base="https://equal.bbox.earth/ol-geojson/">&lt;p&gt;OpenLayers map using Proj4js reprojecting GeoJSON data with mouseover function.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>OpenLayers - OSM raster tiles</title>
+        <published>2024-04-25T00:00:00+00:00</published>
+        <updated>2024-04-25T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Pirmin Kalberer
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://equal.bbox.earth/ol-osm-proj/"/>
+        <id>https://equal.bbox.earth/ol-osm-proj/</id>
+        
+        <content type="html" xml:base="https://equal.bbox.earth/ol-osm-proj/">&lt;p&gt;OpenLayers map using Proj4js reprojecting OSM raster tiles.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>OpenLayers - Equal Earth grid with Proj4js</title>
+        <published>2024-04-24T00:00:00+00:00</published>
+        <updated>2024-04-24T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Pirmin Kalberer
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://equal.bbox.earth/ol-equal-proj/"/>
+        <id>https://equal.bbox.earth/ol-equal-proj/</id>
+        
+        <content type="html" xml:base="https://equal.bbox.earth/ol-equal-proj/">&lt;p&gt;OpenLayers map using Proj4js and Equal Earth tile grid.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>OpenLayers - Equal Earth grid</title>
+        <published>2024-04-24T00:00:00+00:00</published>
+        <updated>2024-04-24T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Pirmin Kalberer
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://equal.bbox.earth/ol-equal-styled/"/>
+        <id>https://equal.bbox.earth/ol-equal-styled/</id>
+        
+        <content type="html" xml:base="https://equal.bbox.earth/ol-equal-styled/">&lt;p&gt;OpenLayers map using custom projection and Equal Earth tile grid. Vector tiles styled with GL JSON.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>OpenLayers - Equal Earth grid</title>
+        <published>2024-04-24T00:00:00+00:00</published>
+        <updated>2024-04-24T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Pirmin Kalberer
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://equal.bbox.earth/ol-equal/"/>
+        <id>https://equal.bbox.earth/ol-equal/</id>
+        
+        <content type="html" xml:base="https://equal.bbox.earth/ol-equal/">&lt;p&gt;OpenLayers map using custom projection and Equal Earth tile grid.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Leaflet - Web Mercator grid</title>
+        <published>2024-04-22T00:00:00+00:00</published>
+        <updated>2024-04-24T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Pirmin Kalberer
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://equal.bbox.earth/leaflet/"/>
+        <id>https://equal.bbox.earth/leaflet/</id>
+        
+        <content type="html" xml:base="https://equal.bbox.earth/leaflet/">&lt;p&gt;Leaflet map using Web Mercator tile grid. Vector tiles styled with GL JSON.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>MapLibre - Web Mercator grid</title>
+        <published>2024-04-22T00:00:00+00:00</published>
+        <updated>2024-04-24T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Pirmin Kalberer
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://equal.bbox.earth/maplibre/"/>
+        <id>https://equal.bbox.earth/maplibre/</id>
+        
+        <content type="html" xml:base="https://equal.bbox.earth/maplibre/">&lt;p&gt;MapLibre map using Web Mercator tile grid. Vector tiles styled with GL JSON.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>OpenLayers - Web Mercator grid</title>
+        <published>2024-04-22T00:00:00+00:00</published>
+        <updated>2024-04-24T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Pirmin Kalberer
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://equal.bbox.earth/openlayers/"/>
+        <id>https://equal.bbox.earth/openlayers/</id>
+        
+        <content type="html" xml:base="https://equal.bbox.earth/openlayers/">&lt;p&gt;OpenLayers map using Web Mercator tile grid. Vector tiles styled with GL JSON.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>
