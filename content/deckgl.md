@@ -5,10 +5,10 @@ updated: 2024-05-02
 template: "mapviewer.html"
 extra:
   header: |
-    <script src="https://unpkg.com/deck.gl@latest/dist.min.js"></script>
-    <script src='https://unpkg.com/maplibre-gl@4.1.3/dist/maplibre-gl.js'></script>
-    <link href='https://unpkg.com/maplibre-gl@4.1.3/dist/maplibre-gl.css' rel='stylesheet' />
-    <script src='https://unpkg.com/maplibre-gl-equal-earth@0.2.1/dist/maplibre-gl-equal-earth.umd.js'></script>
+    <script src="https://unpkg.com/deck.gl@9/dist.min.js"></script>
+    <script src='https://unpkg.com/maplibre-gl@4/dist/maplibre-gl.js'></script>
+    <link href='https://unpkg.com/maplibre-gl@4/dist/maplibre-gl.css' rel='stylesheet' />
+    <script src='https://unpkg.com/maplibre-gl-equal-earth@0.2/dist/maplibre-gl-equal-earth.umd.js'></script>
   js: |
     const {MapboxOverlay, ScatterplotLayer} = deck;
 

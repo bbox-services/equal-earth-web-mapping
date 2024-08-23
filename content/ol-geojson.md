@@ -5,9 +5,9 @@ updated: 2024-04-25
 template: "mapviewer.html"
 extra:
   header: |
-    <script src="https://cdn.jsdelivr.net/npm/ol@9.1.0/dist/ol.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/ol@9.1.0/ol.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/proj4@2.11.0/dist/proj4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ol@10/dist/ol.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/ol@10/ol.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/proj4@2/dist/proj4.min.js"></script>
   body: |
     <div id='map'></div>
     <i id="info"></i>

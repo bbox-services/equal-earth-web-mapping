@@ -5,9 +5,9 @@ updated: 2024-04-24
 template: "mapviewer.html"
 extra:
   header: |
-    <script src="https://cdn.jsdelivr.net/npm/ol@9.1.0/dist/ol.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/ol@9.1.0/ol.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/ol-mapbox-style@12.3.1/dist/olms.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ol@10/dist/ol.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/ol@10/ol.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/ol-mapbox-style@12/dist/olms.js"></script>
   js: |
     const extent = [-17243959.06, -17243959.06, 17243959.06, 17243959.06];
     const projection = new ol.proj.Projection({

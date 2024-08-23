@@ -6,13 +6,13 @@ template: "mapviewer.html"
 extra:
   header: |
     <!-- Leaflet -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1/dist/leaflet.js"></script>
 
     <!-- maplibre-gl-leaflet -->
-    <link href="https://unpkg.com/maplibre-gl@4.1.3/dist/maplibre-gl.css" rel='stylesheet' />
-    <script src="https://unpkg.com/maplibre-gl@4.1.3/dist/maplibre-gl.js"></script>
-    <script src="https://unpkg.com/@maplibre/maplibre-gl-leaflet@0.0.20/leaflet-maplibre-gl.js"></script>
+    <link href="https://unpkg.com/maplibre-gl@4/dist/maplibre-gl.css" rel='stylesheet' />
+    <script src="https://unpkg.com/maplibre-gl@4/dist/maplibre-gl.js"></script>
+    <script src="https://unpkg.com/@maplibre/maplibre-gl-leaflet@0/leaflet-maplibre-gl.js"></script>
   js: |
     var map = L.map('map').setView([0, 0], 1);
     var gl = L.maplibreGL({

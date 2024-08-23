@@ -5,8 +5,8 @@ updated: 2024-05-01
 template: "mapviewer.html"
 extra:
   header: |
-    <script src='https://unpkg.com/maplibre-gl@4.1.3/dist/maplibre-gl.js'></script>
-    <link href='https://unpkg.com/maplibre-gl@4.1.3/dist/maplibre-gl.css' rel='stylesheet' />
+    <script src='https://unpkg.com/maplibre-gl@4/dist/maplibre-gl.js'></script>
+    <link href='https://unpkg.com/maplibre-gl@4/dist/maplibre-gl.css' rel='stylesheet' />
   js: |
     var map = new maplibregl.Map({
       container: 'map',

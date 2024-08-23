@@ -5,9 +5,9 @@ updated: 2024-04-25
 template: "mapviewer.html"
 extra:
   header: |
-    <script src="https://cdn.jsdelivr.net/npm/ol@9.1.0/dist/ol.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/ol@9.1.0/ol.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/proj4@2.11.0/dist/proj4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ol@10/dist/ol.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/ol@10/ol.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/proj4@2/dist/proj4.min.js"></script>
   js: |
     proj4.defs('EPSG:8857', '+proj=eqearth +lon_0=0 +x_0=0 +y_0=0 +R=6371008.7714 +units=m +no_defs +type=crs');
     ol.proj.proj4.register(proj4);
