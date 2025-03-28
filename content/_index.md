@@ -24,8 +24,8 @@ the grid corners of Equal Earth Greenwich are at (-17'243'959, 17'243'959) and (
 ![grid diagram](/gridscale.jpg)
 
 Tiles produced in Equal Earth projection on a Equal Earth Greenwich grid can be adressed with
-the same tile numbers by a map viewer using a Web Merctor grid. Tiles are displayed with a scale 
-factor of 1.162. Conversions between geographic WGS84 coordinates and the map coordinate reference 
+the same tile numbers by a map viewer using a Web Merctor grid. Tiles are displayed with a scale
+factor of 1.162. Conversions between geographic WGS84 coordinates and the map coordinate reference
 system give wrong results without adapted calculations.
 But maps can be displayed without any coordinate projection calculations.
 
@@ -87,9 +87,7 @@ A detailed tutorial will follow.
 
 ### Vector tiles in Equal Earth projection
 
-Vector tiles in Equal Earth projection can be produced with <https://www.bbox.earth/tile-server/>
-
-A detailed tutorial will follow.
+Vector tiles in Equal Earth projection can be produced with <https://www.bbox.earth/docs/tile-server/>
 
 Tile matrix sets:
 * Equal Earth Greenwich: [EqualEarthGreenwichWGS84Quad.json](https://github.com/bbox-services/assets/raw/main/ne-extracts/EqualEarthGreenwichWGS84Quad.json)
