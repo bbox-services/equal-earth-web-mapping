@@ -1,0 +1,91 @@
+@font-face {
+  font-family: Roboto;
+  src: url(https://assets.bbox.earth/fonts/Roboto-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(https://assets.bbox.earth/fonts/Roboto-Italic.ttf);
+  font-style: italic;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(https://assets.bbox.earth/fonts/Roboto-Light.ttf);
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(https://assets.bbox.earth/fonts/Roboto-LightItalic.ttf);
+  font-style: italic;
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(https://assets.bbox.earth/fonts/Roboto-Bold.ttf);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(https://assets.bbox.earth/fonts/Roboto-BoldItalic.ttf);
+  font-style: italic;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(https://assets.bbox.earth/fonts/Roboto-Black.ttf);
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(https://assets.bbox.earth/fonts/Roboto-BlackItalic.ttf);
+  font-style: italic;
+  font-weight: 900;
+}
+
+:root {
+  --font-family: Roboto, Ubuntu, 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
+  --font-size-root: 100%;
+  --font-weight-bolder: 700;
+  --font-weight-bold: 400;
+  --font-weight-normal: 200;
+  --font-weight-thin: 100;
+/*
+  --primaryH: 210;
+  --primaryS: 50%;
+  --primaryL: 40%;
+  --primary-bg: #fff;
+  --secondaryH: 0;
+  --secondaryS: 0%;
+  --secondaryL: 13%;
+  --secondary-bg: #fff;
+  --line-height: 1.75rem;
+  --heading-margin: 1.5rem 0 1rem;
+  --border-radius: 2px;
+  --error: #d00;
+  --warning: #ec0;
+  --info: #369;
+  --correct: #080; 
+*/
+}
+
+#map {
+  width: 60%;
+  aspect-ratio: 2/1;
+  /* Revert almond.css styles for map elements */
+  button { text-transform: inherit; min-height: inherit; }
+  button:not(:disabled):not([disabled]):hover { background-color: inherit; color: inherit; }
+  details summary { margin: inherit; padding: inherit; }
+}
+/* Map on smaller screens */
+@media only screen and (max-width: 768px) {
+  #map {
+    width: 100%;
+    aspect-ratio: 1.5/1;
+  }
+}

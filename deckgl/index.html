@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+  <title>deck.gl - Web Mercator grid</title>
+  
+    <link rel="alternate" type="application/atom+xml" title="RSS" href="https://equal.bbox.earth/atom.xml">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/alvaromontoro/almond.css@latest/dist/almond.lite.min.css" />
+  <link rel="stylesheet" href="/style.css" />
+  
+    <script defer src="https://assets.bbox.earth/analytics.js" data-website-id="2598320b-4b17-46d1-9ab6-e7e3589aeed6"></script>
+  
+  
+<script src="https://unpkg.com/deck.gl@9/dist.min.js"></script>
+<script src='https://unpkg.com/maplibre-gl@4/dist/maplibre-gl.js'></script>
+<link href='https://unpkg.com/maplibre-gl@4/dist/maplibre-gl.css' rel='stylesheet' />
+<script src='https://unpkg.com/maplibre-gl-equal-earth@0.2/dist/maplibre-gl-equal-earth.umd.js'></script>
+
+
+</head>
+
+<body>
+  
+<header id="title-block-header">
+<nav><a href="/">Home</a></nav>
+<h1>deck.gl - Web Mercator grid</h1>
+</header>
+<div id='map'></div>
+
+<p>MapLibre map with deck.gl layer using Web Mercator tile grid.</p>
+
+
+<h3>HTML:</h3>
+<pre><code>&lt;div id=&#x27;map&#x27;&gt;&lt;&#x2F;div&gt;</code></pre>
+
+<h3>Javascript:</h3>
+<pre><code>const {MapboxOverlay, ScatterplotLayer} = deck;
+
+var map = new maplibregl.Map({
+  container: &#x27;map&#x27;,
+  maxZoom: 6,
+  style: &#x27;https:&#x2F;&#x2F;equal.bbox.earth&#x2F;natural-earth-countries-style.json&#x27;
+});
+
+map.on(&#x27;style.load&#x27;, () =&gt; {
+  const deckOverlay = new MapboxOverlay({
+    interleaved: true,
+    layers: [
+      new ScatterplotLayer({
+        data: &#x27;https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;visgl&#x2F;deck.gl-data&#x2F;master&#x2F;website&#x2F;airports.json&#x27;,
+        getPosition: d =&gt; maplibregleqearth.geogLonLat_to_eqmercLonLat(d.coordinates),
+        getRadius: 100,
+        getColor: [155, 40, 0],
+        radiusMinPixels: 2
+      })
+    ]
+  });
+
+  map.addControl(deckOverlay);
+});
+</code></pre>
+
+<h3>Header:</h3>
+<pre><code>&lt;script src=&quot;https:&#x2F;&#x2F;unpkg.com&#x2F;deck.gl@9&#x2F;dist.min.js&quot;&gt;&lt;&#x2F;script&gt;
+&lt;script src=&#x27;https:&#x2F;&#x2F;unpkg.com&#x2F;maplibre-gl@4&#x2F;dist&#x2F;maplibre-gl.js&#x27;&gt;&lt;&#x2F;script&gt;
+&lt;link href=&#x27;https:&#x2F;&#x2F;unpkg.com&#x2F;maplibre-gl@4&#x2F;dist&#x2F;maplibre-gl.css&#x27; rel=&#x27;stylesheet&#x27; &#x2F;&gt;
+&lt;script src=&#x27;https:&#x2F;&#x2F;unpkg.com&#x2F;maplibre-gl-equal-earth@0.2&#x2F;dist&#x2F;maplibre-gl-equal-earth.umd.js&#x27;&gt;&lt;&#x2F;script&gt;
+</code></pre>
+
+<script>
+const {MapboxOverlay, ScatterplotLayer} = deck;
+
+var map = new maplibregl.Map({
+  container: 'map',
+  maxZoom: 6,
+  style: 'https://equal.bbox.earth/natural-earth-countries-style.json'
+});
+
+map.on('style.load', () => {
+  const deckOverlay = new MapboxOverlay({
+    interleaved: true,
+    layers: [
+      new ScatterplotLayer({
+        data: 'https://raw.githubusercontent.com/visgl/deck.gl-data/master/website/airports.json',
+        getPosition: d => maplibregleqearth.geogLonLat_to_eqmercLonLat(d.coordinates),
+        getRadius: 100,
+        getColor: [155, 40, 0],
+        radiusMinPixels: 2
+      })
+    ]
+  });
+
+  map.addControl(deckOverlay);
+});
+
+</script>
+
+
+</body>
+
+</html>
