@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+  <title>OpenLayers - FlatGeobuf</title>
+  
+    <link rel="alternate" type="application/atom+xml" title="RSS" href="https://equal.bbox.earth/atom.xml">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/alvaromontoro/almond.css@latest/dist/almond.lite.min.css" />
+  <link rel="stylesheet" href="/style.css" />
+  
+    <script defer src="https://assets.bbox.earth/analytics.js" data-website-id="2598320b-4b17-46d1-9ab6-e7e3589aeed6"></script>
+  
+  
+<script src="https://cdn.jsdelivr.net/npm/ol@10/dist/ol.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/ol@10/ol.min.css" rel="stylesheet">
+<script src="https://unpkg.com/flatgeobuf@4/dist/flatgeobuf-ol.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/proj4@2/dist/proj4.min.js"></script>
+
+
+</head>
+
+<body>
+  
+<header id="title-block-header">
+<nav><a href="/">Home</a></nav>
+<h1>OpenLayers - FlatGeobuf</h1>
+</header>
+<div id='map'></div>
+
+<p>OpenLayers map reprojection FlatGeobuf vector data.</p>
+
+
+<h3>HTML:</h3>
+<pre><code>&lt;div id=&#x27;map&#x27;&gt;&lt;&#x2F;div&gt;</code></pre>
+
+<h3>Javascript:</h3>
+<pre><code>proj4.defs(&#x27;EPSG:8857&#x27;, &#x27;+proj=eqearth +lon_0=0 +x_0=0 +y_0=0 +R=6371008.7714 +units=m +no_defs +type=crs&#x27;);
+ol.proj.proj4.register(proj4);
+
+const extent = [-17243959.06, -17243959.06, 17243959.06, 17243959.06];
+const projection = ol.proj.get(&#x27;EPSG:8857&#x27;);
+projection.setGlobal(true);
+projection.setExtent(extent);
+projection.setWorldExtent([-90, -180, 90, 180]);
+
+const source = new ol.source.Vector();
+const loader = flatgeobuf.createLoader(source, &#x27;https:&#x2F;&#x2F;equal.bbox.earth&#x2F;ecoregions-3857.fgb&#x27;, undefined, false, { featureProjection: projection });
+source.setLoader(loader)
+const fgbLayer = new ol.layer.Vector({
+  source: source,
+  wrapX: false,
+  style: {
+    &#x27;fill-color&#x27;: [&#x27;string&#x27;, [&#x27;get&#x27;, &#x27;COLOR&#x27;], &#x27;#eee&#x27;],
+  },
+});
+
+const map = new ol.Map({
+  layers: [fgbLayer],
+  target: &#x27;map&#x27;,
+  view: new ol.View({
+    projection: &#x27;EPSG:8857&#x27;,
+    center: [0,0],
+    zoom: 0,
+  }),
+});
+</code></pre>
+
+<h3>Header:</h3>
+<pre><code>&lt;script src=&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;ol@10&#x2F;dist&#x2F;ol.js&quot;&gt;&lt;&#x2F;script&gt;
+&lt;link href=&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;ol@10&#x2F;ol.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+&lt;script src=&quot;https:&#x2F;&#x2F;unpkg.com&#x2F;flatgeobuf@4&#x2F;dist&#x2F;flatgeobuf-ol.min.js&quot;&gt;&lt;&#x2F;script&gt;
+&lt;script src=&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;proj4@2&#x2F;dist&#x2F;proj4.min.js&quot;&gt;&lt;&#x2F;script&gt;
+</code></pre>
+
+<script>
+proj4.defs('EPSG:8857', '+proj=eqearth +lon_0=0 +x_0=0 +y_0=0 +R=6371008.7714 +units=m +no_defs +type=crs');
+ol.proj.proj4.register(proj4);
+
+const extent = [-17243959.06, -17243959.06, 17243959.06, 17243959.06];
+const projection = ol.proj.get('EPSG:8857');
+projection.setGlobal(true);
+projection.setExtent(extent);
+projection.setWorldExtent([-90, -180, 90, 180]);
+
+const source = new ol.source.Vector();
+const loader = flatgeobuf.createLoader(source, 'https://equal.bbox.earth/ecoregions-3857.fgb', undefined, false, { featureProjection: projection });
+source.setLoader(loader)
+const fgbLayer = new ol.layer.Vector({
+  source: source,
+  wrapX: false,
+  style: {
+    'fill-color': ['string', ['get', 'COLOR'], '#eee'],
+  },
+});
+
+const map = new ol.Map({
+  layers: [fgbLayer],
+  target: 'map',
+  view: new ol.View({
+    projection: 'EPSG:8857',
+    center: [0,0],
+    zoom: 0,
+  }),
+});
+
+</script>
+
+
+</body>
+
+</html>

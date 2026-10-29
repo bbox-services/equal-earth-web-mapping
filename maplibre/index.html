@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+  <title>MapLibre - Web Mercator grid</title>
+  
+    <link rel="alternate" type="application/atom+xml" title="RSS" href="https://equal.bbox.earth/atom.xml">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/alvaromontoro/almond.css@latest/dist/almond.lite.min.css" />
+  <link rel="stylesheet" href="/style.css" />
+  
+    <script defer src="https://assets.bbox.earth/analytics.js" data-website-id="2598320b-4b17-46d1-9ab6-e7e3589aeed6"></script>
+  
+  
+<script src='https://unpkg.com/maplibre-gl@4/dist/maplibre-gl.js'></script>
+<link href='https://unpkg.com/maplibre-gl@4/dist/maplibre-gl.css' rel='stylesheet' />
+
+
+</head>
+
+<body>
+  
+<header id="title-block-header">
+<nav><a href="/">Home</a></nav>
+<h1>MapLibre - Web Mercator grid</h1>
+</header>
+<div id='map'></div>
+
+<p>MapLibre map using Web Mercator tile grid. Vector tiles styled with GL JSON.</p>
+
+
+<h3>HTML:</h3>
+<pre><code>&lt;div id=&#x27;map&#x27;&gt;&lt;&#x2F;div&gt;</code></pre>
+
+<h3>Javascript:</h3>
+<pre><code>var map = new maplibregl.Map({
+  container: &#x27;map&#x27;,
+  style: &#x27;https:&#x2F;&#x2F;equal.bbox.earth&#x2F;natural-earth-countries-style.json&#x27;
+});
+</code></pre>
+
+<h3>Header:</h3>
+<pre><code>&lt;script src=&#x27;https:&#x2F;&#x2F;unpkg.com&#x2F;maplibre-gl@4&#x2F;dist&#x2F;maplibre-gl.js&#x27;&gt;&lt;&#x2F;script&gt;
+&lt;link href=&#x27;https:&#x2F;&#x2F;unpkg.com&#x2F;maplibre-gl@4&#x2F;dist&#x2F;maplibre-gl.css&#x27; rel=&#x27;stylesheet&#x27; &#x2F;&gt;
+</code></pre>
+
+<script>
+var map = new maplibregl.Map({
+  container: 'map',
+  style: 'https://equal.bbox.earth/natural-earth-countries-style.json'
+});
+
+</script>
+
+
+</body>
+
+</html>

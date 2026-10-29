@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+  <title>OpenLayers - Equal Earth grid</title>
+  
+    <link rel="alternate" type="application/atom+xml" title="RSS" href="https://equal.bbox.earth/atom.xml">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/alvaromontoro/almond.css@latest/dist/almond.lite.min.css" />
+  <link rel="stylesheet" href="/style.css" />
+  
+    <script defer src="https://assets.bbox.earth/analytics.js" data-website-id="2598320b-4b17-46d1-9ab6-e7e3589aeed6"></script>
+  
+  
+<script src="https://cdn.jsdelivr.net/npm/ol@10/dist/ol.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/ol@10/ol.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/ol-mapbox-style@12/dist/olms.js"></script>
+
+
+</head>
+
+<body>
+  
+<header id="title-block-header">
+<nav><a href="/">Home</a></nav>
+<h1>OpenLayers - Equal Earth grid</h1>
+</header>
+<div id='map'></div>
+
+<p>OpenLayers map using custom projection and Equal Earth tile grid. Vector tiles styled with GL JSON.</p>
+
+
+<h3>HTML:</h3>
+<pre><code>&lt;div id=&#x27;map&#x27;&gt;&lt;&#x2F;div&gt;</code></pre>
+
+<h3>Javascript:</h3>
+<pre><code>const extent = [-17243959.06, -17243959.06, 17243959.06, 17243959.06];
+const projection = new ol.proj.Projection({
+  code: &#x27;EPSG:8857&#x27;,
+  extent: extent,
+  units: &#x27;m&#x27;,
+  global: true,
+  worldExtent: [-90, -180, 90, 180],
+});
+ol.proj.addProjection(projection);
+
+const resolutions = [
+  134718.43015625, 67359.215078125, 33679.6075390625, 16839.80376953125, 8419.901884765624, 4209.950942382812, 2104.975471191406, 1052.487735595703, 526.2438677978515, 263.12193389892576, 131.56096694946288, 65.78048347473144, 32.89024173736572, 16.44512086868286, 8.22256043434143, 4.111280217170715, 2.0556401085853575, 1.0278200542926788, 0.5139100271463394, 0.2569550135731697, 0.12847750678658484, 0.06423875339329242, 0.03211937669664621, 0.016059688348323106, 0.008029844174161553
+];
+
+const source = new ol.source.VectorTile({
+  format: new ol.format.MVT(),
+  tileGrid: new ol.tilegrid.TileGrid({
+    extent: extent,
+    resolutions: resolutions,
+    tileSize: 256
+  }),
+  tilePixelRatio: 16,
+  url: &#x27;https:&#x2F;&#x2F;assets.bbox.earth&#x2F;tiles&#x2F;ne_extracts_8857&#x2F;ne_countries&#x2F;{z}&#x2F;{x}&#x2F;{y}.pbf&#x27;,
+  projection: projection
+});
+var mvt = new ol.layer.VectorTile({
+  declutter: true,
+  source: source
+});
+&#x2F;&#x2F; On initial load, tiles are shortly displayed with OL default style
+olms.applyStyle(mvt, &#x27;https:&#x2F;&#x2F;equal.bbox.earth&#x2F;natural-earth-countries-style.json&#x27;);
+
+var map = new ol.Map({
+  layers: [mvt],
+  target: &#x27;map&#x27;,
+  view: new ol.View({
+    center: [0, 0],
+    projection: projection,
+    zoom: 1
+  })
+});
+</code></pre>
+
+<h3>Header:</h3>
+<pre><code>&lt;script src=&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;ol@10&#x2F;dist&#x2F;ol.js&quot;&gt;&lt;&#x2F;script&gt;
+&lt;link href=&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;ol@10&#x2F;ol.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+&lt;script src=&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;ol-mapbox-style@12&#x2F;dist&#x2F;olms.js&quot;&gt;&lt;&#x2F;script&gt;
+</code></pre>
+
+<script>
+const extent = [-17243959.06, -17243959.06, 17243959.06, 17243959.06];
+const projection = new ol.proj.Projection({
+  code: 'EPSG:8857',
+  extent: extent,
+  units: 'm',
+  global: true,
+  worldExtent: [-90, -180, 90, 180],
+});
+ol.proj.addProjection(projection);
+
+const resolutions = [
+  134718.43015625, 67359.215078125, 33679.6075390625, 16839.80376953125, 8419.901884765624, 4209.950942382812, 2104.975471191406, 1052.487735595703, 526.2438677978515, 263.12193389892576, 131.56096694946288, 65.78048347473144, 32.89024173736572, 16.44512086868286, 8.22256043434143, 4.111280217170715, 2.0556401085853575, 1.0278200542926788, 0.5139100271463394, 0.2569550135731697, 0.12847750678658484, 0.06423875339329242, 0.03211937669664621, 0.016059688348323106, 0.008029844174161553
+];
+
+const source = new ol.source.VectorTile({
+  format: new ol.format.MVT(),
+  tileGrid: new ol.tilegrid.TileGrid({
+    extent: extent,
+    resolutions: resolutions,
+    tileSize: 256
+  }),
+  tilePixelRatio: 16,
+  url: 'https://assets.bbox.earth/tiles/ne_extracts_8857/ne_countries/{z}/{x}/{y}.pbf',
+  projection: projection
+});
+var mvt = new ol.layer.VectorTile({
+  declutter: true,
+  source: source
+});
+// On initial load, tiles are shortly displayed with OL default style
+olms.applyStyle(mvt, 'https://equal.bbox.earth/natural-earth-countries-style.json');
+
+var map = new ol.Map({
+  layers: [mvt],
+  target: 'map',
+  view: new ol.View({
+    center: [0, 0],
+    projection: projection,
+    zoom: 1
+  })
+});
+
+</script>
+
+
+</body>
+
+</html>
