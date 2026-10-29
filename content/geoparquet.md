@@ -41,9 +41,24 @@ extra:
           }).readFeatures(features),
           overlaps: false,
         });
-        
+
+        const globalSource = new ol.source.ImageTile({
+          attributions:
+            'Tiles © <a href="https://maps.eox.at" target="_blank">eox.at</a> / <a href="http://nasa.gov" target="_blank">NASA</a>',
+          url: 'https://tiles.maps.eox.at/wmts/1.0.0/bluemarble/default/WGS84/{z}/{y}/{x}.jpg',
+          tileGrid: ol.tilegrid.createXYZ({
+            extent: [-180, -90, 180, 90],
+            maxResolution: 180 / 256,
+          }),
+          projection: 'EPSG:4326',
+          wrapX: false,
+        });
+
         const map = new ol.Map({
-          layers: [new ol.layer.Vector({ source: vectorSource })],
+          layers: [
+            new ol.layer.WebGLTile({ source: globalSource }),
+            new ol.layer.Vector({ source: vectorSource }),
+          ],
           target: 'map',
           view: new ol.View({
             projection: 'EPSG:8857',
