@@ -15,6 +15,14 @@
     "countries": {
       "type": "vector",
       "url": "https://assets.bbox.earth/tiles/ne_extracts_8857/ne_countries.json"
+    },
+    "morocco-sahara-fill": {
+      "type": "geojson",
+      "data": "/map-patches/morocco-sahara-fill.geojson"
+    },
+    "morocco-sahara-outline": {
+      "type": "geojson",
+      "data": "/map-patches/morocco-sahara-outline.geojson"
     }
   },
   "glyphs": "https://assets.bbox.earth/fonts/{fontstack}/{range}.pbf",
@@ -29,6 +37,7 @@
     "type": "line",
     "source": "countries",
     "source-layer": "country",
+    "filter": ["!in","adm0_a3","MAR","SAH"],
     "layout": {
       "line-join":"round"
     },
@@ -44,6 +53,7 @@
     "type": "line",
     "source": "countries",
     "source-layer": "country",
+    "filter": ["!in","adm0_a3","MAR","SAH"],
     "layout": {
       "line-join":"round"
     },
@@ -59,6 +69,7 @@
     "type": "fill",
     "source": "countries",
     "source-layer": "country",
+    "filter": ["!in","adm0_a3","MAR","SAH"],
     "paint": {
       "fill-color": {
         "property": "mapcolor7",
@@ -72,6 +83,49 @@
             [7, "#ceb5cf"]
         ]
       }
+    }
+  },{
+    "id": "morocco-sahara-fill",
+    "type": "fill",
+    "source": "morocco-sahara-fill",
+    "paint": {
+      "fill-color": {
+        "property": "adm0_a3",
+        "type": "categorical",
+        "stops": [
+            ["MAR", "#fdc663"],
+            ["SAH", "#d3e46f"]
+        ]
+      },
+      "fill-antialias": false
+    }
+  },{
+    "id": "morocco-sahara-glow-outer",
+    "type": "line",
+    "source": "morocco-sahara-outline",
+    "layout": {
+      "line-join":"round"
+    },
+    "paint": {
+      "line-color": "#226688",
+      "line-width": 5,
+      "line-opacity": {
+        "stops": [[0,0],[1,0.1]]
+      }
+    }
+  },{
+    "id": "morocco-sahara-glow-inner",
+    "type": "line",
+    "source": "morocco-sahara-outline",
+    "layout": {
+      "line-join":"round"
+    },
+    "paint": {
+      "line-color": "#226688",
+      "line-width": {
+        "stops": [[0,1.2],[1,1.6],[2,2],[3,2.4]]
+      },
+      "line-opacity": 0.8
     }
   },{
     "id": "country-fill-special",
