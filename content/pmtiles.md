@@ -71,4 +71,4 @@ extra:
     });
 ---
 
-OpenLayers map using Web Mercator raster tiles from a PMTiles archive.
+OpenLayers map using Web Mercator raster tiles in Mercator projection from a PMTiles archive.
