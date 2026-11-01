@@ -79,4 +79,4 @@ extra:
   js: ""
 ---
 
-OpenLayers map reprojection FlatGeobuf vector data.
+OpenLayers map GeoZarr raster data in WGS84 coordinates.

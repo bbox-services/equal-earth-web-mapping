@@ -41,4 +41,4 @@ extra:
     });
 ---
 
-OpenLayers map reprojection FlatGeobuf vector data.
+OpenLayers map with FlatGeobuf vector data in WGS84 coordinates.

@@ -84,4 +84,4 @@ extra:
     });
 ---
 
-OpenLayers map using Proj4js reprojecting GeoJSON data with mouseover function.
+OpenLayers map with mouseover function from GeoJSON data in WGS84 coordinates using Proj4js.

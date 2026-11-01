@@ -72,4 +72,4 @@ extra:
   js: ""
 ---
 
-OpenLayers map reprojecting GeoParquet vector data.
+OpenLayers map GeoParquet vector data in WGS84 coordinates.

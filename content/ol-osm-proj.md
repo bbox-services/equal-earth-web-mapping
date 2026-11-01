@@ -32,4 +32,4 @@ extra:
     map.addControl(new ol.control.ScaleLine());
 ---
 
-OpenLayers map using Proj4js reprojecting OSM raster tiles.
+OpenLayers map from OSM raster tiles in Mercator projection using Proj4js.
