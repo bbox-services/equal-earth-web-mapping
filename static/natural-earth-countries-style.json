@@ -19,10 +19,6 @@
     "morocco-sahara-fill": {
       "type": "geojson",
       "data": "/map-patches/morocco-sahara-fill.geojson"
-    },
-    "morocco-sahara-outline": {
-      "type": "geojson",
-      "data": "/map-patches/morocco-sahara-outline.geojson"
     }
   },
   "glyphs": "https://assets.bbox.earth/fonts/{fontstack}/{range}.pbf",
@@ -54,6 +50,34 @@
     "source": "countries",
     "source-layer": "country",
     "filter": ["!in","adm0_a3","MAR","SAH"],
+    "layout": {
+      "line-join":"round"
+    },
+    "paint": {
+      "line-color": "#226688",
+      "line-width": {
+        "stops": [[0,1.2],[1,1.6],[2,2],[3,2.4]]
+      },
+      "line-opacity": 0.8
+    }
+  },{
+    "id": "morocco-sahara-glow-outer",
+    "type": "line",
+    "source": "morocco-sahara-fill",
+    "layout": {
+      "line-join":"round"
+    },
+    "paint": {
+      "line-color": "#226688",
+      "line-width": 5,
+      "line-opacity": {
+        "stops": [[0,0],[1,0.1]]
+      }
+    }
+  },{
+    "id": "morocco-sahara-glow-inner",
+    "type": "line",
+    "source": "morocco-sahara-fill",
     "layout": {
       "line-join":"round"
     },
@@ -98,34 +122,6 @@
         ]
       },
       "fill-antialias": false
-    }
-  },{
-    "id": "morocco-sahara-glow-outer",
-    "type": "line",
-    "source": "morocco-sahara-outline",
-    "layout": {
-      "line-join":"round"
-    },
-    "paint": {
-      "line-color": "#226688",
-      "line-width": 5,
-      "line-opacity": {
-        "stops": [[0,0],[1,0.1]]
-      }
-    }
-  },{
-    "id": "morocco-sahara-glow-inner",
-    "type": "line",
-    "source": "morocco-sahara-outline",
-    "layout": {
-      "line-join":"round"
-    },
-    "paint": {
-      "line-color": "#226688",
-      "line-width": {
-        "stops": [[0,1.2],[1,1.6],[2,2],[3,2.4]]
-      },
-      "line-opacity": 0.8
     }
   },{
     "id": "country-fill-special",
