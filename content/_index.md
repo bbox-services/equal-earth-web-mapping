@@ -99,6 +99,8 @@ Switching between major Equal Earth center meridians:
 
 Equal Earth is made for world maps. For higher resolutions, Web Mercator is a better choice. Interactive maps should therefore transition from Equal Earth to Web Mercator.
 
+![zooming](/equal-earth-zoom.gif)
+
 * [OpenLayers switching to Web Mercator](/ol-mercator-switch)
 
 Combined Equal Earth / Web Mercator vector tiles:
