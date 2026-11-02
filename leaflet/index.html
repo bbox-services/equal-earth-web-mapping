@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+  <title>Leaflet - Web Mercator grid</title>
+  
+    <link rel="alternate" type="application/atom+xml" title="RSS" href="https://equal.bbox.earth/atom.xml">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/alvaromontoro/almond.css@latest/dist/almond.lite.min.css" />
+  <link rel="stylesheet" href="/style.css" />
+  
+    <script defer src="https://assets.bbox.earth/analytics.js" data-website-id="2598320b-4b17-46d1-9ab6-e7e3589aeed6"></script>
+  
+  
+<!-- Leaflet -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1/dist/leaflet.js"></script>
+
+<!-- maplibre-gl-leaflet -->
+<link href="https://unpkg.com/maplibre-gl@4/dist/maplibre-gl.css" rel='stylesheet' />
+<script src="https://unpkg.com/maplibre-gl@4/dist/maplibre-gl.js"></script>
+<script src="https://unpkg.com/@maplibre/maplibre-gl-leaflet@0/leaflet-maplibre-gl.js"></script>
+
+
+</head>
+
+<body>
+  
+<header id="title-block-header">
+<nav><a href="/">Home</a></nav>
+<h1>Leaflet - Web Mercator grid</h1>
+</header>
+<div id='map'></div>
+
+<p>Leaflet map using Web Mercator tile grid. Vector tiles styled with GL JSON.</p>
+
+
+<h3>HTML:</h3>
+<pre><code>&lt;div id=&#x27;map&#x27;&gt;&lt;&#x2F;div&gt;</code></pre>
+
+<h3>Javascript:</h3>
+<pre><code>var map = L.map(&#x27;map&#x27;).setView([0, 0], 1);
+var gl = L.maplibreGL({
+    style: &#x27;https:&#x2F;&#x2F;equal.bbox.earth&#x2F;natural-earth-countries-style.json&#x27;
+}).addTo(map);
+</code></pre>
+
+<h3>Header:</h3>
+<pre><code>&lt;!-- Leaflet --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https:&#x2F;&#x2F;unpkg.com&#x2F;leaflet@1&#x2F;dist&#x2F;leaflet.css&quot; &#x2F;&gt;
+&lt;script src=&quot;https:&#x2F;&#x2F;unpkg.com&#x2F;leaflet@1&#x2F;dist&#x2F;leaflet.js&quot;&gt;&lt;&#x2F;script&gt;
+
+&lt;!-- maplibre-gl-leaflet --&gt;
+&lt;link href=&quot;https:&#x2F;&#x2F;unpkg.com&#x2F;maplibre-gl@4&#x2F;dist&#x2F;maplibre-gl.css&quot; rel=&#x27;stylesheet&#x27; &#x2F;&gt;
+&lt;script src=&quot;https:&#x2F;&#x2F;unpkg.com&#x2F;maplibre-gl@4&#x2F;dist&#x2F;maplibre-gl.js&quot;&gt;&lt;&#x2F;script&gt;
+&lt;script src=&quot;https:&#x2F;&#x2F;unpkg.com&#x2F;@maplibre&#x2F;maplibre-gl-leaflet@0&#x2F;leaflet-maplibre-gl.js&quot;&gt;&lt;&#x2F;script&gt;
+</code></pre>
+
+<script>
+var map = L.map('map').setView([0, 0], 1);
+var gl = L.maplibreGL({
+    style: 'https://equal.bbox.earth/natural-earth-countries-style.json'
+}).addTo(map);
+
+</script>
+
+
+</body>
+
+</html>

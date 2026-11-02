@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+  <title>OpenLayers - Switch to Web Mercator</title>
+  
+    <link rel="alternate" type="application/atom+xml" title="RSS" href="https://equal.bbox.earth/atom.xml">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/alvaromontoro/almond.css@latest/dist/almond.lite.min.css" />
+  <link rel="stylesheet" href="/style.css" />
+  
+    <script defer src="https://assets.bbox.earth/analytics.js" data-website-id="2598320b-4b17-46d1-9ab6-e7e3589aeed6"></script>
+  
+  
+<script src="https://cdn.jsdelivr.net/npm/ol@10/dist/ol.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/ol@10/ol.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/ol-mapbox-style@12/dist/olms.js"></script>
+
+
+</head>
+
+<body>
+  
+<header id="title-block-header">
+<nav><a href="/">Home</a></nav>
+<h1>OpenLayers - Switch to Web Mercator</h1>
+</header>
+<div id='map'></div>
+
+<p>OpenLayers with Equal Earth tiles for zoom level 1-2 and Web Mercator tiles for level 3-6.</p>
+
+
+<h3>HTML:</h3>
+<pre><code>&lt;div id=&#x27;map&#x27;&gt;&lt;&#x2F;div&gt;</code></pre>
+
+<h3>Javascript:</h3>
+<pre><code>var eqearth = new ol.layer.VectorTile({
+  source: new ol.source.VectorTile({
+    format: new ol.format.MVT(),
+    url: &#x27;https:&#x2F;&#x2F;assets.bbox.earth&#x2F;tiles&#x2F;ne_extracts_8857&#x2F;ne_countries&#x2F;{z}&#x2F;{x}&#x2F;{y}.pbf&#x27;
+  }),
+  maxZoom: 3,
+});
+olms.applyStyle(eqearth, &#x27;https:&#x2F;&#x2F;equal.bbox.earth&#x2F;natural-earth-countries-style.json&#x27;);
+
+var merc = new ol.layer.VectorTile({
+  source: new ol.source.VectorTile({
+    format: new ol.format.MVT(),
+    url: &#x27;https:&#x2F;&#x2F;assets.bbox.earth&#x2F;tiles&#x2F;ne_extracts_3857&#x2F;ne_countries&#x2F;{z}&#x2F;{x}&#x2F;{y}.pbf&#x27;
+  }),
+  minZoom: 3,
+});
+olms.applyStyle(merc, &#x27;https:&#x2F;&#x2F;equal.bbox.earth&#x2F;natural-earth-countries-style.json&#x27;, {updateSource: false});
+
+const map = new ol.Map({
+  layers: [eqearth, merc],
+  target: &#x27;map&#x27;,
+  view: new ol.View({
+    center: [0, 0],
+    zoom: 0,
+    maxZoom: 6,
+  }),
+});
+</code></pre>
+
+<h3>Header:</h3>
+<pre><code>&lt;script src=&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;ol@10&#x2F;dist&#x2F;ol.js&quot;&gt;&lt;&#x2F;script&gt;
+&lt;link href=&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;ol@10&#x2F;ol.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+&lt;script src=&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;ol-mapbox-style@12&#x2F;dist&#x2F;olms.js&quot;&gt;&lt;&#x2F;script&gt;
+</code></pre>
+
+<script>
+var eqearth = new ol.layer.VectorTile({
+  source: new ol.source.VectorTile({
+    format: new ol.format.MVT(),
+    url: 'https://assets.bbox.earth/tiles/ne_extracts_8857/ne_countries/{z}/{x}/{y}.pbf'
+  }),
+  maxZoom: 3,
+});
+olms.applyStyle(eqearth, 'https://equal.bbox.earth/natural-earth-countries-style.json');
+
+var merc = new ol.layer.VectorTile({
+  source: new ol.source.VectorTile({
+    format: new ol.format.MVT(),
+    url: 'https://assets.bbox.earth/tiles/ne_extracts_3857/ne_countries/{z}/{x}/{y}.pbf'
+  }),
+  minZoom: 3,
+});
+olms.applyStyle(merc, 'https://equal.bbox.earth/natural-earth-countries-style.json', {updateSource: false});
+
+const map = new ol.Map({
+  layers: [eqearth, merc],
+  target: 'map',
+  view: new ol.View({
+    center: [0, 0],
+    zoom: 0,
+    maxZoom: 6,
+  }),
+});
+
+</script>
+
+
+</body>
+
+</html>

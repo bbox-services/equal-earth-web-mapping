@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+  <title>Gleo - styled GeoJSON</title>
+  
+    <link rel="alternate" type="application/atom+xml" title="RSS" href="https://equal.bbox.earth/atom.xml">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/alvaromontoro/almond.css@latest/dist/almond.lite.min.css" />
+  <link rel="stylesheet" href="/style.css" />
+  
+    <script defer src="https://assets.bbox.earth/analytics.js" data-website-id="2598320b-4b17-46d1-9ab6-e7e3589aeed6"></script>
+  
+  
+
+
+</head>
+
+<body>
+  
+<header id="title-block-header">
+<nav><a href="/">Home</a></nav>
+<h1>Gleo - styled GeoJSON</h1>
+</header>
+<div style="width: calc(100vw - 32px); height: calc(100vh - 80px)" id="gleomap"></div>
+<script type="importmap">
+  {
+    "imports": {
+            "gleo/": "https://unpkg.com/gleo/src/"
+    }
+  }
+</script>
+<script type='module'>
+  import { default as GleoMap } from "gleo/MercatorMap.mjs";
+  import GeoJSON from "gleo/loaders/GeoJSON.mjs";
+  import Hair from "gleo/symbols/Hair.mjs";
+  import Fill from "gleo/symbols/Fill.mjs";
+
+  import epsg8857 from "gleo/crs/epsg8857.mjs";
+
+  const map = (window.map = new GleoMap("gleomap"));
+  map.crs = epsg8857;
+
+  map.setView({
+    center: [0, 0],
+    span: 8,
+  });
+
+  new GeoJSON(
+    "https://ivansanchez.gitlab.io/gleo/assets/ne_110m_coastline.geojson",
+    {
+      lineSymbolizer: function (feat, geom) {
+        return new Hair(geom, { colour: "blue" });
+      },
+    }
+  ).addTo(map);
+
+  // From colorbrewer2.org, a qualitative 7-colour ramp
+  const colourRamp = [
+    "#7fc97f",
+    "#beaed4",
+    "#fdc086",
+    "#ffff99",
+    "#386cb0",
+    "#f0027f",
+    "#bf5b17",
+  ];
+
+  new GeoJSON("https://ivansanchez.gitlab.io/gleo/assets/geoBoundariesCGAZ_ADM0.simplify100usr.geojson", {
+    polygonSymbolizer: function (feat, geom) {
+      return new Fill(geom, {
+        colour: colourRamp[feat.properties.color_id - 1],
+      });
+    },
+  }).addTo(map);
+</script>
+
+
+<p><a href="https://ivansanchez.gitlab.io/gleo/">Gleo</a> map with built-in support for Equal Earth.</p>
+
+
+<h3>HTML:</h3>
+<pre><code>&lt;div style=&quot;width: calc(100vw - 32px); height: calc(100vh - 80px)&quot; id=&quot;gleomap&quot;&gt;&lt;&#x2F;div&gt;
+&lt;script type=&quot;importmap&quot;&gt;
+  {
+    &quot;imports&quot;: {
+            &quot;gleo&#x2F;&quot;: &quot;https:&#x2F;&#x2F;unpkg.com&#x2F;gleo&#x2F;src&#x2F;&quot;
+    }
+  }
+&lt;&#x2F;script&gt;
+&lt;script type=&#x27;module&#x27;&gt;
+  import { default as GleoMap } from &quot;gleo&#x2F;MercatorMap.mjs&quot;;
+  import GeoJSON from &quot;gleo&#x2F;loaders&#x2F;GeoJSON.mjs&quot;;
+  import Hair from &quot;gleo&#x2F;symbols&#x2F;Hair.mjs&quot;;
+  import Fill from &quot;gleo&#x2F;symbols&#x2F;Fill.mjs&quot;;
+
+  import epsg8857 from &quot;gleo&#x2F;crs&#x2F;epsg8857.mjs&quot;;
+
+  const map = (window.map = new GleoMap(&quot;gleomap&quot;));
+  map.crs = epsg8857;
+
+  map.setView({
+    center: [0, 0],
+    span: 8,
+  });
+
+  new GeoJSON(
+    &quot;https:&#x2F;&#x2F;ivansanchez.gitlab.io&#x2F;gleo&#x2F;assets&#x2F;ne_110m_coastline.geojson&quot;,
+    {
+      lineSymbolizer: function (feat, geom) {
+        return new Hair(geom, { colour: &quot;blue&quot; });
+      },
+    }
+  ).addTo(map);
+
+  &#x2F;&#x2F; From colorbrewer2.org, a qualitative 7-colour ramp
+  const colourRamp = [
+    &quot;#7fc97f&quot;,
+    &quot;#beaed4&quot;,
+    &quot;#fdc086&quot;,
+    &quot;#ffff99&quot;,
+    &quot;#386cb0&quot;,
+    &quot;#f0027f&quot;,
+    &quot;#bf5b17&quot;,
+  ];
+
+  new GeoJSON(&quot;https:&#x2F;&#x2F;ivansanchez.gitlab.io&#x2F;gleo&#x2F;assets&#x2F;geoBoundariesCGAZ_ADM0.simplify100usr.geojson&quot;, {
+    polygonSymbolizer: function (feat, geom) {
+      return new Fill(geom, {
+        colour: colourRamp[feat.properties.color_id - 1],
+      });
+    },
+  }).addTo(map);
+&lt;&#x2F;script&gt;
+</code></pre>
+
+<h3>Javascript:</h3>
+<pre><code></code></pre>
+
+<h3>Header:</h3>
+<pre><code></code></pre>
+
+<script>
+
+</script>
+
+
+</body>
+
+</html>

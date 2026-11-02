@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+  <title>Equal Earth Web Mapping</title>
+  
+    <link rel="alternate" type="application/atom+xml" title="RSS" href="https://equal.bbox.earth/atom.xml">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/alvaromontoro/almond.css@latest/dist/almond.lite.min.css" />
+  <link rel="stylesheet" href="/style.css" />
+  
+    <script defer src="https://assets.bbox.earth/analytics.js" data-website-id="2598320b-4b17-46d1-9ab6-e7e3589aeed6"></script>
+  
+   
+</head>
+
+<body>
+  
+<h1>Equal Earth Web Mapping</h1>
+<h2 id="equal-area-projection-for-web-mapping">Equal-area projection for web mapping</h2>
+<p>Most of today's web maps are using the <a href="https://en.wikipedia.org/wiki/Web_Mercator_projection">Web Mercator projection</a>. A major issue of Web Mercator is the distortion of area sizes far from the equator.</p>
+<p>In 2018 Bojan Šavrič, Tom Patterson and Bernhard Jenny published their work on the <a href="https://www.equal-earth.com/">Equal Earth map projection</a>, an equal-area projection for world maps.</p>
+<p><img src="/equal-earth-etopo1.jpg" alt="" /></p>
+<p>This site is an information collection about using the Equal Earth map projection for web mapping.</p>
+<h3 id="equal-earth-projection-codes">Equal Earth projection codes</h3>
+<p>There are official EPSG codes for the following Equal Earth projection variants:</p>
+<ul>
+<li>Equal Earth Greenwich: EPSG:8857</li>
+<li>Equal Earth Americas: EPSG:8858</li>
+<li>Equal Earth Asia-Pacific: EPSG:8859</li>
+</ul>
+<p>So most GIS software packages already support creating maps in Equal Earth projection.</p>
+<h2 id="data-in-wgs84-or-web-mercator">Data in WGS84 or Web Mercator</h2>
+<p>Existing data in geographic WGS84 coordinates or in Web Mercator projection can be reprojected
+to Equal Earth by the map viewer.</p>
+<p>Examples:</p>
+<ul>
+<li><a href="/ol-geojson">OpenLayers - GeoJSON with mouseover infos</a></li>
+<li><a href="/fgb">OpenLayers - FlatGeobuf</a></li>
+<li><a href="/ol-osm-proj">OpenLayers - OSM raster tiles</a></li>
+<li><a href="/geoparquet">OpenLayers - GeoParquet</a></li>
+<li><a href="/geozarr">OpenLayers - GeoZarr</a></li>
+<li><a href="/pmtiles">OpenLayers - PMTiles raster tiles</a></li>
+<li><a href="/gleo-geojson">Gleo - styled GeoJSON</a></li>
+</ul>
+<p>Other viewers:</p>
+<ul>
+<li><a href="https://dneuman.github.io/EqualEarth/">Matplotlib add-on</a></li>
+</ul>
+<h2 id="data-in-equal-earth-projection">Data in Equal Earth projection</h2>
+<p>For viewers without reprojection support, data has to be in Equal Earth projection.</p>
+<h3 id="equal-earth-vector-tiles-using-web-mercator-grid">Equal Earth vector tiles using Web Mercator grid</h3>
+<p>A quadratic grid for Equal Earth centered on Greenwich is similar to a Web Mercator grid.
+Instead of Mercator grid corners at (-20'037'508, 20'037'508) and (20'037'508, -20'037'508)
+the grid corners of Equal Earth Greenwich are at (-17'243'959, 17'243'959) and (17'243'959, -17'243'959).</p>
+<p><img src="/gridscale.jpg" alt="grid diagram" /></p>
+<p>Tiles produced in Equal Earth projection on a Equal Earth Greenwich grid can be adressed with
+the same tile numbers by a map viewer using a Web Merctor grid. Tiles are displayed with a scale
+factor of 1.162. Conversions between geographic WGS84 coordinates and the map coordinate reference
+system give wrong results without adapted calculations.
+But maps can be displayed without any coordinate projection calculations.</p>
+<p>Basic usage examples:</p>
+<ul>
+<li><a href="/maplibre">MapLibre</a> | <a href="/maplibre-asia-pacific">Asia-Pacific centered</a> | <a href="/maplibre-americas">Americas centered</a></li>
+<li><a href="/openlayers">OpenLayers</a> | <a href="/ol-asia-pacific">Asia-Pacific centered</a> | <a href="/ol-americas">Americas centered</a></li>
+<li><a href="/leaflet">Leaflet</a></li>
+<li><a href="/deckgl">deck.gl</a></li>
+</ul>
+<h3 id="equal-earth-vector-tiles-using-equal-earth-grid">Equal Earth vector tiles using Equal Earth grid</h3>
+<p>Examples:</p>
+<ul>
+<li><a href="/ol-equal">OpenLayers</a></li>
+<li><a href="/ol-equal-proj">OpenLayers with Proj4js</a></li>
+<li><a href="/ol-equal-styled">OpenLayers with GL JSON style</a></li>
+</ul>
+<h3 id="creating-data-in-equal-earth-projection">Creating data in Equal Earth projection</h3>
+<p>Example using GDAL:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>ogr2ogr ne_10m_populated_places.fgb -t_srs EPSG:8857 /vsicurl/https://github.com/nvkelso/natural-earth-vector/raw/master/geojson/ne_10m_populated_places_simple.geojson
+</span></code></pre>
+<h2 id="dynamic-center-meridian">Dynamic center meridian</h2>
+<p>Equal Earth projection allows the center meridian to be dynamically adjusted to the map view.</p>
+<p><img src="/equal-earth-rotation.gif" alt="rotating" /></p>
+<p>(Interactive <a href="https://observablehq.com/d/ece4d307c72c1312">Observable notebook</a>)</p>
+<p>Switching between major Equal Earth center meridians:</p>
+<ul>
+<li><a href="/ol-proj-switch">OpenLayers with projection switch</a></li>
+</ul>
+<h2 id="transition-to-web-mercator">Transition to Web Mercator</h2>
+<p>Equal Earth is made for world maps. For higher resolutions, Web Mercator is a better choice. Interactive maps should therefore transition from Equal Earth to Web Mercator.</p>
+<p><img src="/equal-earth-zoom.gif" alt="zooming" /></p>
+<ul>
+<li><a href="/ol-mercator-switch">OpenLayers switching to Web Mercator</a></li>
+</ul>
+<p>Combined Equal Earth / Web Mercator vector tiles:</p>
+<ul>
+<li><a href="/maplibre-eq2merc">MapLibre</a></li>
+<li><a href="/ol-eq2merc">OpenLayers</a></li>
+<li><a href="/leaflet-eq2merc">Leaflet</a></li>
+</ul>
+<h2 id="feedback-and-contributions">Feedback and contributions</h2>
+<p>For feedback please open an issue or pull request on <a href="https://github.com/bbox-services/equal-earth-web-mapping">https://github.com/bbox-services/equal-earth-web-mapping</a></p>
+
+
+</body>
+
+</html>
